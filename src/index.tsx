@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Reset } from "styled-reset"
+import {Provider} from "react-redux"
+import store from "./tools/store"
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+      <Reset/>
+      <App />
+  </Provider>,
   document.getElementById('root')
 );
 
